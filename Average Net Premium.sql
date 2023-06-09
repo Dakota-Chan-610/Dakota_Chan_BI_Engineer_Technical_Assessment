@@ -25,15 +25,11 @@ P2 AS (
 I1 AS (
   SELECT 
     policy_number,
-    SUM(
-      CASE
-        WHEN status = 'refunded' THEN pre_levy_amount * -1
-        ELSE pre_levy_amount
-      END) AS PRE
+    SUM(pre_levy_amount) AS PRE
   FROM
     data.invoice
   WHERE
-    status IN ('Paid', 'refunded', 'open')
+    status IN ('Paid', 'open')
   GROUP BY
     policy_number
 )
