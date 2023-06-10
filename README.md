@@ -2,7 +2,9 @@
 
 [Dashboard link](https://lookerstudio.google.com/reporting/3103d044-fea8-4c95-a227-5336fb11735e/page/p_v66ctnuv6c)
 
-**Please note that there's 3 page in the dashboard**
+```diff
+@@ Please note that there's 3 page in the dashboard @@
+````
 
 ## Assumption on each excel expression:  
 - Only take Invoice with status "Open", "Paid" in count.  
